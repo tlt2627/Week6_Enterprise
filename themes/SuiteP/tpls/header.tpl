@@ -1,4 +1,5 @@
 {*
+<script src="include/javascript/real_estate_nav.js"></script>
 /**
  *
  * SugarCRM Community Edition is a customer relationship management program developed by

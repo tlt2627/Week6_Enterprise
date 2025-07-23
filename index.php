@@ -50,3 +50,39 @@ require_once 'include/MVC/SugarApplication.php';
 $app = new SugarApplication();
 $app->startSession();
 $app->execute();
+
+// ADD REAL ESTATE TO SUITECRM DROPDOWNS
+echo '<script>
+console.log("🏠 Real Estate Integration Loading...");
+
+function addRealEstateDropdowns() {
+    var dropdowns = document.querySelectorAll("ul.dropdown-menu");
+    console.log("Found dropdowns:", dropdowns.length);
+    
+    dropdowns.forEach(function(dropdown) {
+        if (!dropdown.innerHTML.includes("REAL ESTATE")) {
+            dropdown.innerHTML += `
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header" style="background:#007cba; color:white; padding:8px 15px; font-weight:bold;">🏠 REAL ESTATE</li>
+                <li><a href="real_estate.php?m=Properties" style="padding:8px 15px; display:block; color:#333;">🏠 Properties</a></li>
+                <li><a href="real_estate.php?m=PropertySearch" style="padding:8px 15px; display:block; color:#333;">🔍 Search</a></li>
+                <li><a href="real_estate.php?m=PropertyFiles" style="padding:8px 15px; display:block; color:#333;">📁 Files</a></li>
+                <li><a href="real_estate.php?m=UserRoles" style="padding:8px 15px; display:block; color:#333;">👥 Roles</a></li>
+                <li><a href="real_estate.php?m=PropertyAnalytics" style="padding:8px 15px; display:block; color:#333;">📊 Analytics</a></li>
+                <li><a href="real_estate.php?m=ContactManager" style="padding:8px 15px; display:block; color:#333;">📞 Contacts</a></li>
+            `;
+        }
+    });
+    console.log("✅ Real Estate features added!");
+}
+
+// Run multiple times to catch all dropdowns
+setTimeout(addRealEstateDropdowns, 1000);
+setTimeout(addRealEstateDropdowns, 3000);
+setTimeout(addRealEstateDropdowns, 5000);
+
+// Run when user clicks to catch dynamic menus
+document.addEventListener("click", function() {
+    setTimeout(addRealEstateDropdowns, 500);
+});
+</script>';
