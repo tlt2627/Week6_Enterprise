@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🔥 ULTRA SIMPLE TEST 🔥</title>
+</head>
+<body style="background: #f0f0f0; font-family: Arial; padding: 20px;">
+    
+    <h1 style="color: red; text-align: center;">🔥 ULTRA SIMPLE TEST PAGE 🔥</h1>
+    
+    <div style="background: yellow; padding: 20px; margin: 20px; border: 5px solid red;">
+        <h2>✅ This page loads independently</h2>
+        <p>If you can see this, basic HTML/CSS works!</p>
+        <p>Current time: <span id="time"></span></p>
+    </div>
+    
+    <div style="background: lime; padding: 20px; margin: 20px; border: 5px solid blue;">
+        <h2>🔧 JavaScript Test</h2>
+        <p id="js-test">❌ JavaScript NOT working</p>
+        <button onclick="testButton()">Click to Test JS</button>
+    </div>
+    
+    <div style="background: orange; padding: 20px; margin: 20px; border: 5px solid purple;">
+        <h2>🏠 Real Estate Links Test</h2>
+        <a href="index.php?module=Properties&action=index" style="display: block; padding: 10px; background: #ff6b6b; color: white; text-decoration: none; margin: 5px;">🏠 Properties</a>
+        <a href="index.php?module=PropertyImages&action=index" style="display: block; padding: 10px; background: #4ecdc4; color: white; text-decoration: none; margin: 5px;">📸 Property Images</a>
+        <a href="index.php?module=CommissionCalculator&action=index" style="display: block; padding: 10px; background: #ff6b6b; color: white; text-decoration: none; margin: 5px;">💰 Commission Calculator</a>
+    </div>
+
+    <script>
+        console.log('🚨 ULTRA SIMPLE TEST - Console works!');
+        
+        // Update time
+        document.getElementById('time').textContent = new Date().toLocaleTimeString();
+        
+        // Test JS
+        document.getElementById('js-test').textContent = '✅ JavaScript IS working!';
+        document.getElementById('js-test').style.color = 'green';
+        
+        function testButton() {
+            alert('✅ JavaScript button works!');
+            console.log('✅ Button clicked successfully!');
+        }
+        
+        // Test console extensively
+        console.log('📍 URL:', window.location.href);
+        console.log('🔧 Browser:', navigator.userAgent);
+        console.log('📊 Screen:', screen.width + 'x' + screen.height);
+        console.log('🎯 This should definitely appear in console!');
+    </script>
+    
+</body>
+</html> 

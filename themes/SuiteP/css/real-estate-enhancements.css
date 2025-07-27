@@ -1,0 +1,454 @@
+/**
+ * Real Estate CRM Enhancements
+ * Modern Open House Experience - Premium Real Estate Styling
+ * Integrates with modern-open-house.css for complete theming
+ */
+
+/* Import Modern Open House Base Styles */
+@import url('modern-open-house.css');
+
+/* Premium Property Card Styling - Enhanced from base */
+.property-card {
+    background: var(--open-house-warm-white, #FEFEFE);
+    border-radius: var(--open-house-radius-lg, 16px);
+    box-shadow: var(--open-house-shadow-soft, 0 2px 8px rgba(26, 54, 93, 0.08));
+    margin-bottom: var(--open-house-spacing-xl, 2rem);
+    overflow: hidden;
+    transition: all var(--open-house-transition-medium, 0.3s ease-in-out);
+    border: 1px solid rgba(26, 54, 93, 0.08);
+    position: relative;
+}
+
+/* Premium Open House Card Effects */
+.property-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--open-house-gold, #D69E2E) 0%, var(--open-house-sage, #68D391) 100%);
+    opacity: 0;
+    transition: opacity var(--open-house-transition-medium, 0.3s ease-in-out);
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--open-house-shadow-hover, 0 12px 40px rgba(26, 54, 93, 0.2));
+}
+
+.property-card:hover::before {
+    opacity: 1;
+}
+
+.property-card-header {
+    background: linear-gradient(135deg, var(--open-house-navy, #1A365D) 0%, var(--open-house-charcoal, #2D3748) 100%);
+    color: var(--open-house-warm-white, #FEFEFE);
+    padding: var(--open-house-spacing-xl, 2rem);
+    position: relative;
+}
+
+.property-price {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--open-house-font-headings, 'Poppins', sans-serif);
+    margin-bottom: var(--open-house-spacing-xs, 0.25rem);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.property-address {
+    font-size: 1rem;
+    opacity: 0.95;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.property-status {
+    position: absolute;
+    top: var(--open-house-spacing-lg, 1.5rem);
+    right: var(--open-house-spacing-lg, 1.5rem);
+    background: var(--open-house-gold, #D69E2E);
+    color: var(--open-house-navy, #1A365D);
+    padding: var(--open-house-spacing-xs, 0.25rem) var(--open-house-spacing-md, 1rem);
+    border-radius: var(--open-house-radius-xl, 24px);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(214, 158, 46, 0.4);
+}
+
+.property-card-body {
+    padding: var(--open-house-spacing-xl, 2rem);
+    background: var(--open-house-warm-white, #FEFEFE);
+}
+
+.property-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--open-house-spacing-md, 1rem);
+    margin-bottom: var(--open-house-spacing-lg, 1.5rem);
+}
+
+.property-feature {
+    text-align: center;
+    padding: var(--open-house-spacing-lg, 1.5rem);
+    background: var(--open-house-light-gray, #F8F9FA);
+    border-radius: var(--open-house-radius-md, 12px);
+    border: 1px solid rgba(26, 54, 93, 0.05);
+    transition: all var(--open-house-transition-medium, 0.3s ease-in-out);
+}
+
+.property-feature:hover {
+    background: var(--open-house-soft-gray, #E9ECEF);
+    transform: translateY(-2px);
+    box-shadow: var(--open-house-shadow-soft, 0 2px 8px rgba(26, 54, 93, 0.08));
+}
+
+.property-feature-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--open-house-navy, #1A365D);
+    font-family: var(--open-house-font-headings, 'Poppins', sans-serif);
+    margin-bottom: var(--open-house-spacing-xs, 0.25rem);
+}
+
+.property-feature-label {
+    font-size: 0.875rem;
+    color: var(--open-house-warm-gray, #718096);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Mobile-Responsive Design */
+@media (max-width: 768px) {
+    .property-card {
+        margin: 10px;
+        border-radius: 8px;
+    }
+    
+    .property-card-header {
+        padding: 15px;
+    }
+    
+    .property-price {
+        font-size: 20px;
+    }
+    
+    .property-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .property-feature {
+        padding: 8px;
+    }
+    
+    .property-feature-value {
+        font-size: 16px;
+    }
+}
+
+/* Enhanced Search Dashboard - Open House Style */
+.property-search-dashboard {
+    background: linear-gradient(135deg, var(--open-house-warm-white, #FEFEFE) 0%, var(--open-house-light-gray, #F8F9FA) 100%);
+    border: 1px solid rgba(26, 54, 93, 0.08) !important;
+    border-radius: var(--open-house-radius-lg, 16px);
+    box-shadow: var(--open-house-shadow-medium, 0 4px 16px rgba(26, 54, 93, 0.12));
+    padding: var(--open-house-spacing-2xl, 3rem);
+    margin-bottom: var(--open-house-spacing-2xl, 3rem);
+}
+
+.property-search-dashboard h3 {
+    background: linear-gradient(135deg, var(--open-house-navy, #1A365D) 0%, var(--open-house-gold, #D69E2E) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: var(--open-house-spacing-lg, 1.5rem);
+    font-family: var(--open-house-font-headings, 'Poppins', sans-serif);
+}
+
+.property-search-dashboard .form-control {
+    border: 2px solid var(--open-house-soft-gray, #E9ECEF);
+    border-radius: var(--open-house-radius-sm, 6px);
+    padding: var(--open-house-spacing-md, 1rem) var(--open-house-spacing-lg, 1.5rem);
+    font-size: 1rem;
+    font-family: var(--open-house-font-primary, 'Inter', sans-serif);
+    transition: all var(--open-house-transition-medium, 0.3s ease-in-out);
+    background: var(--open-house-warm-white, #FEFEFE);
+}
+
+.property-search-dashboard .form-control:focus {
+    border-color: var(--open-house-gold, #D69E2E);
+    box-shadow: 0 0 0 3px rgba(214, 158, 46, 0.15);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.property-search-dashboard button {
+    background: linear-gradient(135deg, var(--open-house-navy, #1A365D) 0%, var(--open-house-charcoal, #2D3748) 100%);
+    color: var(--open-house-warm-white, #FEFEFE);
+    border: none;
+    border-radius: var(--open-house-radius-sm, 6px);
+    padding: var(--open-house-spacing-md, 1rem) var(--open-house-spacing-xl, 2rem);
+    font-family: var(--open-house-font-primary, 'Inter', sans-serif);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--open-house-transition-medium, 0.3s ease-in-out);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--open-house-shadow-soft, 0 2px 8px rgba(26, 54, 93, 0.08));
+}
+
+.property-search-dashboard button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--open-house-shadow-medium, 0 4px 16px rgba(26, 54, 93, 0.12));
+    background: linear-gradient(135deg, var(--open-house-charcoal, #2D3748) 0%, var(--open-house-navy, #1A365D) 100%);
+}
+
+/* Commission Calculator Enhancements */
+.commission-breakdown {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.commission-item {
+    padding: 10px;
+    border-left: 4px solid #3498db;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Contact Form Mobile Enhancements */
+.mobile-contact-form {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.contact-fab {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+}
+
+.contact-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+}
+
+/* Property Image Gallery */
+.property-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.property-image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.property-image:hover {
+    transform: scale(1.05);
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.property-image.primary::before {
+    content: 'Primary';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Enhanced List View */
+.list-view-enhanced {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.list-view-enhanced .oddListRowS1,
+.list-view-enhanced .evenListRowS1 {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.list-view-enhanced .oddListRowS1:hover,
+.list-view-enhanced .evenListRowS1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Quick Stats Cards */
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.stat-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .property-card {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+    
+    .property-card-body {
+        background: #34495e;
+    }
+    
+    .property-feature {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+    
+    .commission-breakdown {
+        background: #2c3e50 !important;
+        color: #ecf0f1;
+    }
+    
+    .commission-item {
+        background: #34495e;
+        color: #ecf0f1;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .property-search-dashboard,
+    .mobile-contact-form,
+    .contact-fab {
+        display: none !important;
+    }
+    
+    .property-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+    }
+    
+    .commission-breakdown {
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+}
+
+/* Accessibility Improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .property-card {
+        border: 2px solid #000;
+    }
+    
+    .property-card-header {
+        background: #000;
+        color: #fff;
+    }
+    
+    .property-feature {
+        border: 1px solid #000;
+    }
+} 

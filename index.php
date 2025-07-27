@@ -86,3 +86,8 @@ document.addEventListener("click", function() {
     setTimeout(addRealEstateDropdowns, 500);
 });
 </script>';
+
+// Include Modern Real Estate UI
+if (file_exists('modern_ui_injector.php')) {
+    include 'modern_ui_injector.php';
+}
